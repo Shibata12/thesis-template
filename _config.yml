@@ -1,0 +1,12 @@
+title: 修士論文テンプレート
+author: 柴田 侃汰
+execute:
+  execute_notebooks: 'off'
+
+# HTML-specific settings
+html:
+  google_analytics_id       : "G-N0EV69M39Q"
+
+parse:
+  myst_enable_extensions:
+    - amsmath
