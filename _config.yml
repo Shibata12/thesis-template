@@ -5,7 +5,7 @@ execute:
 
 # HTML-specific settings
 html:
-  google_analytics_id       : "G-N0EV69M39Q"
+  google_analytics_id       : "G-5LBYFFM18Y"
 
 parse:
   myst_enable_extensions:
