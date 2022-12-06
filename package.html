@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>パッケージの利用 &#8212; 修士論文テンプレート</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="表紙を作る" href="front-cover.html" />
+    <link rel="prev" title="LaTeXを使用するための準備" href="preparation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0EV69M39Q"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-N0EV69M39Q');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">修士論文テンプレート</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="preface.html">
+                    はじめに
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preparation.html">
+   LaTeXを使用するための準備
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   パッケージの利用
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="front-cover.html">
+   表紙を作る
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="abstract.html">
+   概要を作る
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-of-contents.html">
+   目次（図表も含む）を作る
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   序論を作る
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="figure-table.html">
+   図表を載せる
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgments.html">
+   謝辞を作る
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   参考文献を作る
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/package.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   パッケージの読み込み
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>パッケージの利用</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   パッケージの読み込み
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>パッケージの利用<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>LaTeXには様々なパッケージがあります．例えば，図や画像を張り込むためのパッケージ(<code class="docutils literal notranslate"><span class="pre">graphicx</span></code>)や，しおりを作るためのパッケージ(<code class="docutils literal notranslate"><span class="pre">hyperref</span></code>)などがあります．ここでは，パッケージの読み込み方法を示します．</p>
+<div class="section" id="id2">
+<h2>パッケージの読み込み<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">パッケージを読み込む前に</p>
+<p>パッケージ間の互換性には複雑な問題があるそうです．これを解決するために<code class="docutils literal notranslate"><span class="pre">\RequirePackage{plautopatch}</span></code>と<code class="docutils literal notranslate"><span class="pre">\RequirePackage[l2tabu,</span> <span class="pre">orthodox]{nag}</span></code>を<code class="docutils literal notranslate"><span class="pre">\documentclass[]{}</span></code>の前に置きます．これは，パッケージ間の互換性に問題がある場合に適切な処理を行うパッチと，警告を行うパッケージです．詳しくは，<a class="reference external" href="https://qiita.com/wtsnjp/items/76557b1598445a1fc9da">日本語 LaTeX の新常識 2021 - Qiita</a>と<a class="reference external" href="https://blog.goo.ne.jp/superspeed1963/e/4500867fef0c7711fb46f66cc093361b">古いコマンドやパッケージを確認する</a>を確認してください．</p>
+</div>
+<p>パッケージの読み込みは<code class="docutils literal notranslate"><span class="pre">\documentclass[]{}</span></code>と<code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code>の間に書き込みます．この間の部分はプリアンブル部(preamble)といいます．</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><code class="docutils literal notranslate"><span class="pre">%</span></code>でコメントアウトできます．</p>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">main.tex</span></code></p>
+</div>
+<div class="sd-card-body docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\RequirePackage</span><span class="nb">{</span>plautopatch<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="na">[l2tabu, orthodox]</span><span class="nb">{</span>nag<span class="nb">}</span>
+
+<span class="k">\documentclass</span><span class="na">[]</span><span class="nb">{</span>jlreq<span class="nb">}</span>
+<span class="c">% プリアンブル部</span>
+<span class="c">% ここでパッケージを読み込む</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+Hello <span class="k">\LaTeX</span>!
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>パッケージの読み込みは<code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code>の中で行い，このファイルを読み込むことで行います．回りくどいように見えますがこれからファイルを色々追加していくので，フォルダ分けを行いファイルを整理します．まず，下の画像のように左上の＋をクリックして新規ファイルを作成します．ファイル名は<code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code>にします．
+<img alt="preamble" src="_images/preamble.png" />
+同様にして，新規フォルダ<code class="docutils literal notranslate"><span class="pre">contents</span></code>を作成します（上記と同じような操作なので画像で示しません）．その後，ドラッグアンドドロップで<code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code>を<code class="docutils literal notranslate"><span class="pre">contents</span></code>フォルダに移動します．最終的に，下の画像のようにフォルダとファイルが構成されていればOKです．
+<img alt="create-contents" src="_images/create-contents.png" />
+さて，<code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code>に以下のように書き込みます．パッケージは<code class="docutils literal notranslate"><span class="pre">\usepackage[]{}</span></code>で読み込みます．<code class="docutils literal notranslate"><span class="pre">[]</span></code>部分はオプションを，<code class="docutils literal notranslate"><span class="pre">{}</span></code>部分はパッケージ名を指定します．</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>修士論文のフォーマットは，令和３（２０２１）年度茨城大学大学院理工学研究科履修要項p.37（以降，要項）によると，上下右左の余白がすべて20 mmと指定されています．</p>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code></p>
+</div>
+<div class="sd-card-body docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="na">[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]</span><span class="nb">{</span>geometry<span class="nb">}</span> <span class="c">% 余白設定</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>              <span class="c">% 図や画像などのグラフィックを扱う</span>
+<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>              <span class="c">% 論文に使用されるような表を出力</span>
+<span class="k">\usepackage</span><span class="nb">{</span>amsmath, amssymb<span class="nb">}</span>      <span class="c">% 数式表現パッケージ</span>
+<span class="k">\usepackage</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>hyperref<span class="nb">}</span>    <span class="c">% しおりを作成</span>
+<span class="k">\usepackage</span><span class="nb">{</span>pxjahyper<span class="nb">}</span>             <span class="c">% 日本語のしおりを作成</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code>の読み込みは，<code class="docutils literal notranslate"><span class="pre">main.tex</span></code>内で<code class="docutils literal notranslate"><span class="pre">\input{}</span></code>を使用して行います．</p>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">main.tex</span></code></p>
+</div>
+<div class="sd-card-body docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\RequirePackage</span><span class="nb">{</span>plautopatch<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="na">[l2tabu, orthodox]</span><span class="nb">{</span>nag<span class="nb">}</span>
+
+<span class="k">\documentclass</span><span class="na">[]</span><span class="nb">{</span>jlreq<span class="nb">}</span>
+
+<span class="k">\input</span><span class="nb">{</span>contents/preamble.tex<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+Hello <span class="k">\LaTeX</span>!
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="preparation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">LaTeXを使用するための準備</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="front-cover.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">表紙を作る</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By 柴田 侃汰<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
