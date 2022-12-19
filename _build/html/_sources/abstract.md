@@ -53,6 +53,7 @@ Here is text. Here is text. Here is text. Here is text. Here is text. Here is te
   jafontsize=10pt,  % 和文フォントサイズの指定
   titlepage,        % タイトルページを独立させて表示させる
   book,             % bookクラスを選択
+  openany,          % 章が変わったときの空白ページ自動挿入をしない
 ]{jlreq}
 
 \input{contents/preamble.tex}
