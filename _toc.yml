@@ -1,12 +1,18 @@
 format: jb-book
 root: preface
-chapters:
-- file: preparation
-- file: package
-- file: front-cover
-- file: abstract
-- file: table-of-contents
-- file: introduction
-- file: figure-table
-- file: acknowledgments
-- file: references
+parts:
+- caption: テンプレート作成
+  chapters:
+  - file: preparation
+  - file: package
+  - file: front-cover
+  - file: abstract
+  - file: table-of-contents
+  - file: introduction
+  - file: figure-table
+  - file: acknowledgments
+  - file: references
+
+# - caption: おまけ
+#   chapters:
+#   - file: 

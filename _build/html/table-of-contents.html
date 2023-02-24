@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="序論を作る" href="introduction.html" />
-    <link rel="prev" title="概要を作る" href="abstract.html" />
+    <link rel="prev" title="要旨を作る" href="abstract.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,7 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  テンプレート作成
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="preparation.html">
    LaTeXを使用するための準備
@@ -133,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="abstract.html">
-   概要を作る
+   要旨を作る
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -297,7 +302,8 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>目次（図表も含む）を作る<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<p>図表も含む目次は<code class="docutils literal notranslate"><span class="pre">\tableofcontents,</span> <span class="pre">\listoffigures,</span> <span class="pre">\listoftables</span></code>を<code class="docutils literal notranslate"><span class="pre">main.tex</span></code>に追加するだけで作成されます．</p>
+<p>図表も含む目次は<code class="docutils literal notranslate"><span class="pre">\tableofcontents,</span> <span class="pre">\listoffigures,</span> <span class="pre">\listoftables</span></code>を<code class="docutils literal notranslate"><span class="pre">main.tex</span></code>に追加するだけで作成されます．
+<img alt="image-table-of-contents" src="_images/table-of-contents.png" /></p>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -308,19 +314,19 @@ title="Print to PDF"
 <span class="k">\RequirePackage</span><span class="na">[l2tabu, orthodox]</span><span class="nb">{</span>nag<span class="nb">}</span>
 
 <span class="k">\documentclass</span>[
-  platex,           <span class="c">% 使用するコンパイラ（2022年11月現在のCloud LaTeXではplatexがデフォルトで使用されている）</span>
+  platex,           <span class="c">% 使用するコンパイラ（2023年2月時点のCloud LaTeXではplatexがデフォルトで使用されている）</span>
   dvipdfmx,         <span class="c">% ドライバ</span>
   fontsize=10pt,    <span class="c">% 欧文フォントサイズの指定</span>
   jafontsize=10pt,  <span class="c">% 和文フォントサイズの指定</span>
-  titlepage,        <span class="c">% タイトルページを独立させて表示させる</span>
   book,             <span class="c">% bookクラスを選択</span>
+  openany,          <span class="c">% 章が変わったときの空白ページ自動挿入をしない</span>
 ]<span class="nb">{</span>jlreq<span class="nb">}</span>
 
 <span class="k">\input</span><span class="nb">{</span>contents/preamble.tex<span class="nb">}</span>
 
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 <span class="k">\input</span><span class="nb">{</span>contents/front-cover.tex<span class="nb">}</span>  <span class="c">% タイトル情報</span>
-<span class="k">\frontmatter</span>                      <span class="c">% 概要，目次部分（ページ番号がローマ数字で記載）</span>
+<span class="k">\pagenumbering</span><span class="nb">{</span>roman<span class="nb">}</span>             <span class="c">% ページ番号をローマ数字で記載</span>
 <span class="k">\input</span><span class="nb">{</span>contents/0abstract.tex<span class="nb">}</span>    <span class="c">% 概要（日本語，英語）</span>
 <span class="k">\tableofcontents</span>                  <span class="c">% 目次</span>
 <span class="k">\newpage</span>
@@ -366,7 +372,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">概要を作る</p>
+            <p class="prev-next-title">要旨を作る</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="introduction.html" title="next page">
@@ -385,7 +391,7 @@ title="Print to PDF"
   
     By 柴田 侃汰<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

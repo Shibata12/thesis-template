@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>概要を作る &#8212; 修士論文テンプレート</title>
+    <title>要旨を作る &#8212; 修士論文テンプレート</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -115,7 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  テンプレート作成
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="preparation.html">
    LaTeXを使用するための準備
@@ -133,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   概要を作る
+   要旨を作る
   </a>
  </li>
  <li class="toctree-l1">
@@ -283,7 +288,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>概要を作る</h1>
+                <h1>要旨を作る</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -296,10 +301,10 @@ title="Print to PDF"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>概要を作る<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>要旨を作る<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>表紙の次は概要(abstract)です．概要は日本語と英語で書きます．ファイルの構成と最終的な仕上がりは下の画像のようになります．
 <img alt="abstract" src="_images/abstract.png" />
-概要の内容は<code class="docutils literal notranslate"><span class="pre">0abstract.tex</span></code>に書き込みます．</p>
+概要の内容は<code class="docutils literal notranslate"><span class="pre">0abstract.tex</span></code>に書き込みます．<code class="docutils literal notranslate"><span class="pre">\vspace{}</span></code>で任意の間隔を指定してください．ここでは5mmにしています．</p>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -307,33 +312,32 @@ title="Print to PDF"
 </div>
 <div class="sd-card-body docutils">
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="c">% 日本語-------------------------</span>
+<span class="k">\phantomsection</span> <span class="c">% 目次のリンクのために使用</span>
+<span class="k">\addcontentsline</span><span class="nb">{</span>toc<span class="nb">}{</span>chapter<span class="nb">}{</span>要旨<span class="nb">}</span> <span class="c">% 目次に要旨を追加</span>
 <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
-  <span class="k">\textbf</span><span class="nb">{</span>
-    <span class="nb">{</span><span class="k">\LARGE</span> ここに修士論文のタイトル<span class="k">\\</span><span class="nb">}</span>
-  <span class="nb">}</span>
-  <span class="k">\vspace</span><span class="nb">{</span>7mm<span class="nb">}</span>
+  <span class="k">\textbf</span><span class="nb">{{</span><span class="k">\LARGE</span> ここにタイトル<span class="k">\\</span><span class="nb">}}</span>
+  <span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
   <span class="nb">{</span><span class="k">\large</span> 茨城大学大学院理工学研究科機械システム工学専攻<span class="k">\\</span>
   柴田 侃汰<span class="k">\\</span><span class="nb">}</span>
-  <span class="k">\vspace</span><span class="nb">{</span>7mm<span class="nb">}</span>
-  <span class="nb">{</span><span class="k">\large</span> 概要<span class="nb">}</span>
+  <span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
+  <span class="nb">{</span><span class="k">\large</span> 要旨<span class="nb">}</span>
+  <span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．
 
-ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．ここに本文．
 <span class="k">\newpage</span>
 
 <span class="c">% 英語-------------------------</span>
 <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
-  <span class="k">\textbf</span><span class="nb">{</span>
-   <span class="nb">{</span><span class="k">\LARGE</span> Master&#39;s thesis title here<span class="k">\\</span><span class="nb">}</span>
-  <span class="nb">}</span>
-  <span class="k">\vspace</span><span class="nb">{</span>7mm<span class="nb">}</span>
+  <span class="k">\textbf</span><span class="nb">{{</span><span class="k">\LARGE</span> Title Here<span class="k">\\</span><span class="nb">}}</span>
+  <span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
   <span class="nb">{</span><span class="k">\large</span> Major in Mechanical Systems Engineering,<span class="k">\\</span> Graduate School of Science and Engineering, Ibaraki University<span class="k">\\</span>
   Kanta SHIBATA<span class="k">\\</span><span class="nb">}</span>
-  <span class="k">\vspace</span><span class="nb">{</span>7mm<span class="nb">}</span>
+  <span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
   <span class="nb">{</span><span class="k">\large</span> Abstract<span class="nb">}</span>
+  <span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
-
-Here is text. Here is text. Here is text. Here is text. Here is text. Here is text. Here is text. Here is text. Here is text.
+Here is text. Here is text. Here is text. Here is text. Here is text.
 </pre></div>
 </div>
 </div>
@@ -350,11 +354,10 @@ Here is text. Here is text. Here is text. Here is text. Here is text. Here is te
 <span class="k">\RequirePackage</span><span class="na">[l2tabu, orthodox]</span><span class="nb">{</span>nag<span class="nb">}</span>
 
 <span class="k">\documentclass</span>[
-  platex,           <span class="c">% 使用するコンパイラ（2022年11月現在のCloud LaTeXではplatexがデフォルトで使用されている）</span>
+  platex,           <span class="c">% 使用するコンパイラ（2023年2月時点のCloud LaTeXではplatexがデフォルトで使用されている）</span>
   dvipdfmx,         <span class="c">% ドライバ</span>
   fontsize=10pt,    <span class="c">% 欧文フォントサイズの指定</span>
   jafontsize=10pt,  <span class="c">% 和文フォントサイズの指定</span>
-  titlepage,        <span class="c">% タイトルページを独立させて表示させる</span>
   book,             <span class="c">% bookクラスを選択</span>
   openany,          <span class="c">% 章が変わったときの空白ページ自動挿入をしない</span>
 ]<span class="nb">{</span>jlreq<span class="nb">}</span>
@@ -363,7 +366,7 @@ Here is text. Here is text. Here is text. Here is text. Here is text. Here is te
 
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 <span class="k">\input</span><span class="nb">{</span>contents/front-cover.tex<span class="nb">}</span>  <span class="c">% タイトル情報</span>
-<span class="k">\frontmatter</span>                      <span class="c">% 概要，目次部分（ページ番号がローマ数字で記載）</span>
+<span class="k">\pagenumbering</span><span class="nb">{</span>roman<span class="nb">}</span>             <span class="c">% ページ番号をローマ数字で記載</span>
 <span class="k">\input</span><span class="nb">{</span>contents/0abstract.tex<span class="nb">}</span>    <span class="c">% 概要（日本語，英語）</span>
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
@@ -423,7 +426,7 @@ Here is text. Here is text. Here is text. Here is text. Here is text. Here is te
   
     By 柴田 侃汰<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

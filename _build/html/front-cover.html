@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="概要を作る" href="abstract.html" />
+    <link rel="next" title="要旨を作る" href="abstract.html" />
     <link rel="prev" title="パッケージの利用" href="package.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -115,7 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  テンプレート作成
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="preparation.html">
    LaTeXを使用するための準備
@@ -133,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="abstract.html">
-   概要を作る
+   要旨を作る
   </a>
  </li>
  <li class="toctree-l1">
@@ -306,24 +311,23 @@ title="Print to PDF"
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">front-cover.tex</span></code></p>
 </div>
 <div class="sd-card-body docutils">
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>titlepage<span class="nb">}</span>
-  <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
-    <span class="k">\vspace*</span><span class="nb">{</span>20mm<span class="nb">}</span> <span class="c">% *を付けるとページ頭・ページ末でも空白が出力される．</span>
-    <span class="nb">{</span><span class="k">\LARGE</span> 修　士　学　位　論　文<span class="k">\\</span><span class="nb">}</span>
-    <span class="k">\vfill</span>
-    <span class="k">\textbf</span><span class="nb">{</span>
-      <span class="nb">{</span><span class="k">\huge</span> ここに修士論文のタイトル<span class="nb">}</span>
-    <span class="nb">}</span>
-    <span class="k">\vfill</span>
-    <span class="nb">{</span><span class="k">\LARGE</span> 令和　４　年度<span class="k">\\</span><span class="nb">}</span>
-    <span class="k">\vfill</span>
-    <span class="nb">{</span><span class="k">\LARGE</span> 茨城大学大学院理工学研究科<span class="k">\\</span><span class="nb">}</span>
-    <span class="k">\vfill</span>
-    <span class="nb">{</span><span class="k">\LARGE</span> 機械システム工学専攻<span class="k">\\</span><span class="nb">}</span>
-    <span class="nb">{</span><span class="k">\LARGE</span> 柴田 侃汰<span class="k">\\</span><span class="nb">}</span>
-    <span class="k">\vspace*</span><span class="nb">{</span>20mm<span class="nb">}</span>
-  <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>titlepage<span class="nb">}</span>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\pagenumbering</span><span class="nb">{</span>alph<span class="nb">}</span>
+<span class="k">\thispagestyle</span><span class="nb">{</span>empty<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+  <span class="k">\vspace*</span><span class="nb">{</span>20mm<span class="nb">}</span>
+  <span class="nb">{</span><span class="k">\LARGE</span> 修 士 学 位 論 文<span class="k">\\</span><span class="nb">}</span>
+  <span class="k">\vfill</span>
+  <span class="k">\textbf</span><span class="nb">{{</span><span class="k">\huge</span> ここにタイトル<span class="k">\\</span><span class="nb">}}</span>
+  <span class="k">\vfill</span>
+  <span class="nb">{</span><span class="k">\LARGE</span> 令和4年度<span class="k">\\</span><span class="nb">}</span>
+  <span class="k">\vfill</span>
+  <span class="nb">{</span><span class="k">\LARGE</span> 茨城大学大学院理工学研究科<span class="k">\\</span><span class="nb">}</span>
+  <span class="k">\vfill</span>
+  <span class="nb">{</span><span class="k">\LARGE</span> 機械システム工学専攻<span class="k">\\</span><span class="nb">}</span>
+  <span class="nb">{</span><span class="k">\LARGE</span> 柴田 侃汰<span class="k">\\</span><span class="nb">}</span>
+  <span class="k">\vspace*</span><span class="nb">{</span>20mm<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\newpage</span>
 </pre></div>
 </div>
 </div>
@@ -389,7 +393,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="abstract.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">概要を作る</p>
+        <p class="prev-next-title">要旨を作る</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -402,7 +406,7 @@ title="Print to PDF"
   
     By 柴田 侃汰<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

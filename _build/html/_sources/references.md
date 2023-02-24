@@ -1,5 +1,6 @@
 # 参考文献を作る
 参考文献は`references.bib`というbibファイルに書き込みます．例えば，[LaTeX超入門　ゼロからはじめる理系の文書作成術](https://bookclub.kodansha.co.jp/product?item=0000343850)をbib形式で`references.bib`に以下のように書き込みます．
+bibファイルの書き方は，[このサイト](http://www.yamamo10.jp/yamamoto/comp/latex/bibtex/bibtex.html)がわかりやすいです．
 
 ````{grid-item-card}
 `references.bib`
@@ -21,14 +22,22 @@
 ^^^^^^^^^^^^^
 ```latex
 \newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{謝辞}
 \section*{謝辞}
+謝辞を書く．
 \LaTeX は\cite{latex}を参考にしました．
-\addcontentsline{toc}{chapter}{謝辞} % 目次に謝辞を追加
-\newpage
 ```
 ````
 
-`main.tex`には`\bibliographystyle{junsrt}`と`\bibliography{contents/references.bib}`を書き込みます．
+`main.tex`には
+
+* `\phantomsection`
+* `\addcontentsline{toc}{chapter}{参考文献}`
+* `\bibliographystyle{junsrt}`
+* `\bibliography{contents/references.bib}`
+
+を書き込みます．
 
 ````{grid-item-card}
 `main.tex`
@@ -38,19 +47,19 @@
 \RequirePackage[l2tabu, orthodox]{nag}
 
 \documentclass[
-  platex,           % 使用するコンパイラ（2022年11月現在のCloud LaTeXではplatexがデフォルトで使用されている）
+  platex,           % 使用するコンパイラ（2023年2月時点のCloud LaTeXではplatexがデフォルトで使用されている）
   dvipdfmx,         % ドライバ
   fontsize=10pt,    % 欧文フォントサイズの指定
   jafontsize=10pt,  % 和文フォントサイズの指定
-  titlepage,        % タイトルページを独立させて表示させる
   book,             % bookクラスを選択
+  openany,          % 章が変わったときの空白ページ自動挿入をしない
 ]{jlreq}
 
 \input{contents/preamble.tex}
 
 \begin{document}
 \input{contents/front-cover.tex}  % タイトル情報
-\frontmatter                      % 概要，目次部分（ページ番号がローマ数字で記載）
+\pagenumbering{roman}             % ページ番号をローマ数字で記載
 \input{contents/0abstract.tex}    % 概要（日本語，英語）
 \tableofcontents                  % 目次
 \newpage
@@ -58,13 +67,17 @@
 \newpage
 \listoftables                     % 表目次
 
-\mainmatter                       % 以下，本文（ページ番号がアラビック数字で記載される）
+\pagenumbering{arabic}            % ページ番号をアラビア数字
 \input{contents/1introduction.tex}
 \input{contents/2figure-table.tex}
-\input{contents/acknowledgments.tex}  % 謝辞
+
+\input{contents/acknowledgments.tex} % 謝辞
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}  % 目次に参考文献を追加
 \bibliographystyle{junsrt}                % 参考文献のスタイル
 \bibliography{contents/references.bib}    % 参考文献を表示
-\addcontentsline{toc}{chapter}{参考文献}  % 目次に参考文献を追加
 \end{document}
 ```
 ````
