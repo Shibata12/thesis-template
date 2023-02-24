@@ -114,7 +114,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  テンプレート作成
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="preparation.html">
    LaTeXを使用するための準備
@@ -132,7 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="abstract.html">
-   概要を作る
+   要旨を作る
   </a>
  </li>
  <li class="toctree-l1">
@@ -296,7 +301,8 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>参考文献を作る<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
-<p>参考文献は<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>というbibファイルに書き込みます．例えば，<a class="reference external" href="https://bookclub.kodansha.co.jp/product?item=0000343850">LaTeX超入門　ゼロからはじめる理系の文書作成術</a>をbib形式で<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>に以下のように書き込みます．</p>
+<p>参考文献は<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>というbibファイルに書き込みます．例えば，<a class="reference external" href="https://bookclub.kodansha.co.jp/product?item=0000343850">LaTeX超入門　ゼロからはじめる理系の文書作成術</a>をbib形式で<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>に以下のように書き込みます．
+bibファイルの書き方は，<a class="reference external" href="http://www.yamamo10.jp/yamamoto/comp/latex/bibtex/bibtex.html">このサイト</a>がわかりやすいです．</p>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -322,16 +328,24 @@ title="Print to PDF"
 </div>
 <div class="sd-card-body docutils">
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\newpage</span>
+<span class="k">\phantomsection</span>
+<span class="k">\addcontentsline</span><span class="nb">{</span>toc<span class="nb">}{</span>chapter<span class="nb">}{</span>謝辞<span class="nb">}</span>
 <span class="k">\section*</span><span class="nb">{</span>謝辞<span class="nb">}</span>
+謝辞を書く．
 <span class="k">\LaTeX</span> は<span class="k">\cite</span><span class="nb">{</span>latex<span class="nb">}</span>を参考にしました．
-<span class="k">\addcontentsline</span><span class="nb">{</span>toc<span class="nb">}{</span>chapter<span class="nb">}{</span>謝辞<span class="nb">}</span> <span class="c">% 目次に謝辞を追加</span>
-<span class="k">\newpage</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">main.tex</span></code>には<code class="docutils literal notranslate"><span class="pre">\bibliographystyle{junsrt}</span></code>と<code class="docutils literal notranslate"><span class="pre">\bibliography{contents/references.bib}</span></code>を書き込みます．</p>
+<p><code class="docutils literal notranslate"><span class="pre">main.tex</span></code>には</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\phantomsection</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\addcontentsline{toc}{chapter}{参考文献}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\bibliographystyle{junsrt}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\bibliography{contents/references.bib}</span></code></p></li>
+</ul>
+<p>を書き込みます．</p>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -342,19 +356,19 @@ title="Print to PDF"
 <span class="k">\RequirePackage</span><span class="na">[l2tabu, orthodox]</span><span class="nb">{</span>nag<span class="nb">}</span>
 
 <span class="k">\documentclass</span>[
-  platex,           <span class="c">% 使用するコンパイラ（2022年11月現在のCloud LaTeXではplatexがデフォルトで使用されている）</span>
+  platex,           <span class="c">% 使用するコンパイラ（2023年2月時点のCloud LaTeXではplatexがデフォルトで使用されている）</span>
   dvipdfmx,         <span class="c">% ドライバ</span>
   fontsize=10pt,    <span class="c">% 欧文フォントサイズの指定</span>
   jafontsize=10pt,  <span class="c">% 和文フォントサイズの指定</span>
-  titlepage,        <span class="c">% タイトルページを独立させて表示させる</span>
   book,             <span class="c">% bookクラスを選択</span>
+  openany,          <span class="c">% 章が変わったときの空白ページ自動挿入をしない</span>
 ]<span class="nb">{</span>jlreq<span class="nb">}</span>
 
 <span class="k">\input</span><span class="nb">{</span>contents/preamble.tex<span class="nb">}</span>
 
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 <span class="k">\input</span><span class="nb">{</span>contents/front-cover.tex<span class="nb">}</span>  <span class="c">% タイトル情報</span>
-<span class="k">\frontmatter</span>                      <span class="c">% 概要，目次部分（ページ番号がローマ数字で記載）</span>
+<span class="k">\pagenumbering</span><span class="nb">{</span>roman<span class="nb">}</span>             <span class="c">% ページ番号をローマ数字で記載</span>
 <span class="k">\input</span><span class="nb">{</span>contents/0abstract.tex<span class="nb">}</span>    <span class="c">% 概要（日本語，英語）</span>
 <span class="k">\tableofcontents</span>                  <span class="c">% 目次</span>
 <span class="k">\newpage</span>
@@ -362,13 +376,17 @@ title="Print to PDF"
 <span class="k">\newpage</span>
 <span class="k">\listoftables</span>                     <span class="c">% 表目次</span>
 
-<span class="k">\mainmatter</span>                       <span class="c">% 以下，本文（ページ番号がアラビック数字で記載される）</span>
+<span class="k">\pagenumbering</span><span class="nb">{</span>arabic<span class="nb">}</span>            <span class="c">% ページ番号をアラビア数字</span>
 <span class="k">\input</span><span class="nb">{</span>contents/1introduction.tex<span class="nb">}</span>
 <span class="k">\input</span><span class="nb">{</span>contents/2figure-table.tex<span class="nb">}</span>
-<span class="k">\input</span><span class="nb">{</span>contents/acknowledgments.tex<span class="nb">}</span>  <span class="c">% 謝辞</span>
+
+<span class="k">\input</span><span class="nb">{</span>contents/acknowledgments.tex<span class="nb">}</span> <span class="c">% 謝辞</span>
+
+<span class="k">\newpage</span>
+<span class="k">\phantomsection</span>
+<span class="k">\addcontentsline</span><span class="nb">{</span>toc<span class="nb">}{</span>chapter<span class="nb">}{</span>参考文献<span class="nb">}</span>  <span class="c">% 目次に参考文献を追加</span>
 <span class="k">\bibliographystyle</span><span class="nb">{</span>junsrt<span class="nb">}</span>                <span class="c">% 参考文献のスタイル</span>
 <span class="k">\bibliography</span><span class="nb">{</span>contents/references.bib<span class="nb">}</span>    <span class="c">% 参考文献を表示</span>
-<span class="k">\addcontentsline</span><span class="nb">{</span>toc<span class="nb">}{</span>chapter<span class="nb">}{</span>参考文献<span class="nb">}</span>  <span class="c">% 目次に参考文献を追加</span>
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
 </div>
@@ -422,7 +440,7 @@ title="Print to PDF"
   
     By 柴田 侃汰<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

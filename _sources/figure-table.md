@@ -35,4 +35,4 @@ Armadillo  & frozen      & 8.99       \\ \bottomrule
 ```
 ````
 
-`main.tex`は省略（`\input{contents/2figure-table.tex}`を書き込むだけです）．
+`main.tex`は省略（`\input{contents/2figure-table.tex}`を`\input{contents/1introduction.tex}`の次の行に書き込むだけです）．

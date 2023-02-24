@@ -34,7 +34,7 @@ Hello \LaTeX!
 
 `main.tex`に書き込んだ内容について，簡単に説明します．
 * `documentclass[]{jlreq}`
-<br>文書クラスを指定します．文書クラスは文書のレイアウトや形式（書籍や論文等）を形作ります．ここでは`jlreq`を指定しました．`[]`内ではオプションを指定します．ここではオプションを指定していません（[概要を作る](abstract.md)ときに指定します）．
+<br>文書クラスを指定します．文書クラスは文書のレイアウトや形式（書籍や論文等）を形作ります．ここでは`jlreq`を指定しました．`[]`内ではオプションを指定します．ここではオプションを指定していません（[要旨を作る](abstract.md)ときに指定します）．
 * `begin{document}`と`\begin{document}`
 <br>`begin{document}`と`\begin{document}`は`document`環境を指定します．`begin{document}`と`\begin{document}`の間に本文を書き込みます．ここでは，`Hello \LaTeX!`を書き込みました．
 

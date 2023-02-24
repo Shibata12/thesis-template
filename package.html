@@ -115,7 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  テンプレート作成
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="preparation.html">
    LaTeXを使用するための準備
@@ -133,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="abstract.html">
-   概要を作る
+   要旨を作る
   </a>
  </li>
  <li class="toctree-l1">
@@ -373,7 +378,7 @@ Hello <span class="k">\LaTeX</span>!
 さて，<code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code>に以下のように書き込みます．パッケージは<code class="docutils literal notranslate"><span class="pre">\usepackage[]{}</span></code>で読み込みます．<code class="docutils literal notranslate"><span class="pre">[]</span></code>部分はオプションを，<code class="docutils literal notranslate"><span class="pre">{}</span></code>部分はパッケージ名を指定します．</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>修士論文のフォーマットは，令和３（２０２１）年度茨城大学大学院理工学研究科履修要項p.37（以降，要項）によると，上下右左の余白がすべて20 mmと指定されています．</p>
+<p>修士論文のフォーマットは，令和３（２０２１）年度茨城大学大学院理工学研究科履修要項p.37（以降，要項）によると，上下左右の余白がすべて20 mmと指定されています．</p>
 </div>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
@@ -381,12 +386,18 @@ Hello <span class="k">\LaTeX</span>!
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">preamble.tex</span></code></p>
 </div>
 <div class="sd-card-body docutils">
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="na">[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]</span><span class="nb">{</span>geometry<span class="nb">}</span> <span class="c">% 余白設定</span>
-<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>              <span class="c">% 図や画像などのグラフィックを扱う</span>
-<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>              <span class="c">% 論文に使用されるような表を出力</span>
-<span class="k">\usepackage</span><span class="nb">{</span>amsmath, amssymb<span class="nb">}</span>      <span class="c">% 数式表現パッケージ</span>
-<span class="k">\usepackage</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>hyperref<span class="nb">}</span>    <span class="c">% しおりを作成</span>
-<span class="k">\usepackage</span><span class="nb">{</span>pxjahyper<span class="nb">}</span>             <span class="c">% 日本語のしおりを作成</span>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span>[
+  top=20truemm,
+  bottom=20truemm,
+  left=20truemm,
+  right=20truemm]<span class="nb">{</span>geometry<span class="nb">}</span>         <span class="c">% 余白設定</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>               <span class="c">% 図や画像などのグラフィックを扱う</span>
+<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>               <span class="c">% 論文に使用されるような表を出力</span>
+<span class="k">\usepackage</span><span class="nb">{</span>amsmath, amssymb<span class="nb">}</span>       <span class="c">% 数式表現パッケージ</span>
+<span class="k">\usepackage</span>[
+  dvipdfmx,
+  bookmarksnumbered=true]<span class="nb">{</span>hyperref<span class="nb">}</span> <span class="c">% しおりを作成</span>
+<span class="k">\usepackage</span><span class="nb">{</span>pxjahyper<span class="nb">}</span>              <span class="c">% 日本語のしおりを作成</span>
 </pre></div>
 </div>
 </div>
@@ -467,7 +478,7 @@ Hello <span class="k">\LaTeX</span>!
   
     By 柴田 侃汰<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

@@ -34,19 +34,25 @@ Hello \LaTeX!
 さて，`preamble.tex`に以下のように書き込みます．パッケージは`\usepackage[]{}`で読み込みます．`[]`部分はオプションを，`{}`部分はパッケージ名を指定します．
 
 ```{margin}
-修士論文のフォーマットは，令和３（２０２１）年度茨城大学大学院理工学研究科履修要項p.37（以降，要項）によると，上下右左の余白がすべて20 mmと指定されています．
+修士論文のフォーマットは，令和３（２０２１）年度茨城大学大学院理工学研究科履修要項p.37（以降，要項）によると，上下左右の余白がすべて20 mmと指定されています．
 ```
 
 ````{grid-item-card}
 `preamble.tex`
 ^^^^^^^^^^^^^
 ```latex
-\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} % 余白設定
-\usepackage{graphicx}              % 図や画像などのグラフィックを扱う
-\usepackage{booktabs}              % 論文に使用されるような表を出力
-\usepackage{amsmath, amssymb}      % 数式表現パッケージ
-\usepackage[dvipdfmx]{hyperref}    % しおりを作成
-\usepackage{pxjahyper}             % 日本語のしおりを作成
+\usepackage[
+  top=20truemm,
+  bottom=20truemm,
+  left=20truemm,
+  right=20truemm]{geometry}         % 余白設定
+\usepackage{graphicx}               % 図や画像などのグラフィックを扱う
+\usepackage{booktabs}               % 論文に使用されるような表を出力
+\usepackage{amsmath, amssymb}       % 数式表現パッケージ
+\usepackage[
+  dvipdfmx,
+  bookmarksnumbered=true]{hyperref} % しおりを作成
+\usepackage{pxjahyper}              % 日本語のしおりを作成
 ```
 ````
 

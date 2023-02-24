@@ -6,24 +6,23 @@
 `front-cover.tex`
 ^^^^^^^^^
 ```latex
-\begin{titlepage}
-  \begin{center}
-    \vspace*{20mm} % *を付けるとページ頭・ページ末でも空白が出力される．
-    {\LARGE 修　士　学　位　論　文\\}
-    \vfill
-    \textbf{
-      {\huge ここに修士論文のタイトル}
-    }
-    \vfill
-    {\LARGE 令和　４　年度\\}
-    \vfill
-    {\LARGE 茨城大学大学院理工学研究科\\}
-    \vfill
-    {\LARGE 機械システム工学専攻\\}
-    {\LARGE 柴田 侃汰\\}
-    \vspace*{20mm}
-  \end{center}
-\end{titlepage}
+\pagenumbering{alph}
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{20mm}
+  {\LARGE 修 士 学 位 論 文\\}
+  \vfill
+  \textbf{{\huge ここにタイトル\\}}
+  \vfill
+  {\LARGE 令和4年度\\}
+  \vfill
+  {\LARGE 茨城大学大学院理工学研究科\\}
+  \vfill
+  {\LARGE 機械システム工学専攻\\}
+  {\LARGE 柴田 侃汰\\}
+  \vspace*{20mm}
+\end{center}
+\newpage
 ```
 ````
 
