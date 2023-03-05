@@ -60,7 +60,7 @@ bibファイルの書き方は，[このサイト](http://www.yamamo10.jp/yamamo
 \begin{document}
 \input{contents/front-cover.tex}  % タイトル情報
 \pagenumbering{roman}             % ページ番号をローマ数字で記載
-\input{contents/0abstract.tex}    % 概要（日本語，英語）
+\input{contents/0abstract.tex}    % 要旨（日本語，英語）
 \tableofcontents                  % 目次
 \newpage
 \listoffigures                    % 図目次

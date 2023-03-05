@@ -1,7 +1,7 @@
 # 要旨を作る
-表紙の次は概要(abstract)です．概要は日本語と英語で書きます．ファイルの構成と最終的な仕上がりは下の画像のようになります．
+表紙の次は要旨(abstract)です．要旨は日本語と英語で書きます．ファイルの構成と最終的な仕上がりは下の画像のようになります．
 ![abstract](images/abstract.png)
-概要の内容は`0abstract.tex`に書き込みます．`\vspace{}`で任意の間隔を指定してください．ここでは5mmにしています．
+要旨の内容は`0abstract.tex`に書き込みます．`\vspace{}`で任意の間隔を指定してください．ここでは5mmにしています．
 ````{grid-item-card}
 `0abstract.tex`
 ^^^^^^^^^
@@ -59,7 +59,7 @@ Here is text. Here is text. Here is text. Here is text. Here is text.
 \begin{document}
 \input{contents/front-cover.tex}  % タイトル情報
 \pagenumbering{roman}             % ページ番号をローマ数字で記載
-\input{contents/0abstract.tex}    % 概要（日本語，英語）
+\input{contents/0abstract.tex}    % 要旨（日本語，英語）
 \end{document}
 
 ```

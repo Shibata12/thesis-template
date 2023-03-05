@@ -1,5 +1,8 @@
 # 図表を載せる
-ここでは，図表の載せ方を確認します．図は`figures`フォルダにまとめます．図として読み込むことが可能な形式は`.png, .jpg, .jpeg, .pdf, .eps`です．表を作るのにおすすめのサイトは[Create LaTeX tables online – TablesGenerator.com](https://www.tablesgenerator.com/)です．ファイルの構成と最終的な仕上がりは下の画像のようになります．
+ここでは，図表の載せ方を確認します．
+図は`figures`フォルダにまとめます．
+図として読み込むことが可能な形式は`.png, .jpg, .jpeg, .pdf, .eps`です．
+ファイルの構成と最終的な仕上がりは下の画像のようになります．
 ![figure-table](images/figure-table.png)
 ````{grid-item-card}
 `2figure-table.tex`
@@ -36,3 +39,7 @@ Armadillo  & frozen      & 8.99       \\ \bottomrule
 ````
 
 `main.tex`は省略（`\input{contents/2figure-table.tex}`を`\input{contents/1introduction.tex}`の次の行に書き込むだけです）．
+
+私が利用した図や表を作るツール
+* 図の作成→[Inkscape](https://inkscape.org/ja/) インストールが必要です．オープンソースのベクター画像編集ソフトウェアです．
+* 表の作成→[TablesGenerator.com](https://www.tablesgenerator.com/) インストール不要です．Web上でLaTeX用の表を作成できます．
