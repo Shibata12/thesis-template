@@ -51,6 +51,7 @@
 \listoffigures                    % 図目次
 \newpage
 \listoftables                     % 表目次
+\newpage
 
 \pagenumbering{arabic}            % ページ番号をアラビア数字
 \input{contents/1introduction.tex}

@@ -28,6 +28,7 @@
 \listoffigures                    % 図目次
 \newpage
 \listoftables                     % 表目次
+\newpage
 \end{document}
 
 ```
